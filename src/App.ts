@@ -12,6 +12,7 @@ export class App {
     const response = await axios
       .post<AuthResponse>('http://localhost:3000/api/v1/user/auth', this.credentials)
       .catch((error) => {
+        if (!error.response) throw new Error('No connection to the server');
         throw new Error(JSON.stringify(error.response.data, null, 2));
       });
 
@@ -26,6 +27,7 @@ export class App {
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch((error) => {
+        if (!error.response) throw new Error('No connection to the server');
         throw new Error(JSON.stringify(error.response.data, null, 2));
       });
 
@@ -48,6 +50,7 @@ export class App {
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch((error) => {
+        if (!error.response) throw new Error('No connection to the server');
         throw new Error(JSON.stringify(error.response.data, null, 2));
       });
 
@@ -62,6 +65,7 @@ export class App {
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch((error) => {
+        if (!error.response) throw new Error('No connection to the server');
         throw new Error(JSON.stringify(error.response.data, null, 2));
       });
 
@@ -76,6 +80,7 @@ export class App {
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch((error) => {
+        if (!error.response) throw new Error('No connection to the server');
         throw new Error(JSON.stringify(error.response.data, null, 2));
       });
 
