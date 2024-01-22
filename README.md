@@ -29,4 +29,13 @@ For convenience, repository scripts contain preconfigured commands for each CRUD
 ```bash
 npm run add-car
 # ts-node index.ts add -e user@example.com -p P4ssword! --brand Citroen --model C4 --year 2020 --price 2600000
+
+npm run find-cars
+# ts-node index.ts find -e user@example.com -p P4ssword! --brand Nissan -s price -d DESC
+
+npm run update-car
+# ts-node index.ts update -e user@example.com -p P4ssword! --id 65adb11a62a59cd5a788934d --brand Fiat --model 500 --year 2019 --price 2800000
+
+npm run delete-car
+# ts-node index.ts delete -e user@example.com -p P4ssword! --id 65ae2b6cc22c079b13d8c285
 ```
