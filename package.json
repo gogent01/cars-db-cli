@@ -1,11 +1,15 @@
 {
   "name": "cars-db-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A CLI for a car database holding info on car brands, models, year of manufacturing, price and more",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts"
+    "build": "tsc",
+    "add-car": "ts-node index.ts add -e user@example.com -p P4ssword! --brand Citroen --model C4 --year 2020 --price 2600000",
+    "find-cars": "ts-node index.ts find -e user@example.com -p P4ssword! --brand Nissan -s price -d DESC",
+    "update-car": "ts-node index.ts update -e user@example.com -p P4ssword! --id 65adb11a62a59cd5a788934d --brand Fiat --model 500 --year 2019 --price 2800000",
+    "delete-car": "ts-node index.ts delete -e user@example.com -p P4ssword! --id 65ae2b6cc22c079b13d8c285"
   },
   "keywords": [
     "cli",
